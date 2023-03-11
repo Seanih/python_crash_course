@@ -47,8 +47,7 @@
 
 # WORK OUT YOUR SOLUTION HERE
 # **********************
-print("Challenge 2. --------")
-
+# print("Challenge 2. --------")
 # p1 = input("Player 1 hand: ").lower()
 # p2 = input("Player 2 hand: ").lower()
 
@@ -68,41 +67,42 @@ print("Challenge 2. --------")
 
 
 # Challenge 3 - Lists
+# **********************
 
 # Find the solutions using this list
 
-# birds = ["robin", "bluebird", "sparrow", "cardinal"]
+birds = ["robin", "bluebird", "sparrow", "cardinal"]
 
 
 # 1. Save "bluebird" in a variable
 
 # WORK OUT YOUR SOLUTION HERE
-
+bluebird = birds[1]
 
 # 2. Save "cardinal" in a variable
 
 # WORK OUT YOUR SOLUTION HERE
-
+cardinal = birds[-1]
 
 # 3. Insert "woodpecker" directly behind sparrow in the list
 
 # WORK OUT YOUR SOLUTION HERE
-
+birds.insert(2, 'woodpecker')
 
 # 4. Reverse the birds list and print it out
 
 # WORK OUT YOUR SOLUTION HERE
-
+birds.reverse()
 
 # 5. Save the first two birds only into a new variable called two_birds
 
 # WORK OUT YOUR SOLUTION HERE
-
+two_birds = birds[0:2]
 
 # 6. Print ["sparrow", "cardinal"] using negative indices
 
 # WORK OUT YOUR SOLUTION HERE
-
+print(birds[-5:-3])
 
 
 
