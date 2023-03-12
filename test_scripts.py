@@ -1,3 +1,5 @@
+import re
+
 # Install and Setup
 
 # REPL
@@ -143,51 +145,89 @@
 
 # WORK OUT YOUR SOLUTION HERE
 # **********************
-def lessThan10(arr):
-    newArr = []
-    for num in arr:
-        if num < 10:
-            newArr.append(num)
-    print(newArr)
+# def lessThan10(arr):
+#     newArr = []
+#     for num in arr:
+#         if num < 10:
+#             newArr.append(num)
+#     print(newArr)
 
 
-arr = [1, 2, 33, 4, 10, 5, 30, 11]
-lessThan10(arr)
+# arr = [1, 2, 33, 4, 10, 5, 30, 11]
+# lessThan10(arr)
 
 
 # 6. Dictionaries
 
 # Challenge 6 - Dictionaries
 
-# college = {
-#     "name": "Yale",
-#     "founded": "1701",
-#     "motto": "Light and truth",
-#     "location": "New Haven, Connecticut",
-#     "students": 12060
-# }
+college = {
+    "name": "Yale",
+    "founded": "1701",
+    "motto": "Light and truth",
+    "location": "New Haven, Connecticut",
+    "students": 12060,
+}
 
 # 1. Loop through dictionary and print all the values (values only)
 
 # WORK OUT YOUR SOLUTION HERE
-
+# **********************
+# print(college.values())
 
 # 2. Loop through dictionary and print all the keys and values
 
 # WORK OUT YOUR SOLUTION HERE
-
+# **********************
+# print(college.items())
 
 # 3. Print the "founded" year of the college
 
 # WORK OUT YOUR SOLUTION HERE
-
+# **********************
+# print(college.get('founded'))
 
 # FINAL PROJECT - Password Checker
+# **********************
 
 # 1. Get password input
+password = input("enter password: ")
 # 2. Check if password has lowercase, uppercase, a number, and a special character.
+def has_special(text):
+    if re.search("[@_!#$%^&*()<>?/\\|}{~:]", password):
+        return True
+    return False
+
+
+has_num = any(char.isdigit() for char in password)
+has_cap = any(char.isupper() for char in password)
+has_low = any(char.islower() for char in password)
+
+print(
+    f"char check: {has_special(password)}\nnum check: {has_num}\ncap check: {has_cap}\nlow checkk: {has_low}"
+)
+
 # 3. If the password doesn't meet all four conditions, then reject with the conditions they still need to meet.
+print("----------------")
+if not has_special(password):
+    print("missing special character")
+if not has_num:
+    print("missing a number")
+if not has_cap:
+    print("missing a capital letter")
+if not has_low:
+    print("missing lowercase")
+if len(password) < 9:
+    print("must be at least 9 characters")
+
 # 4. Only accept if all four conditions are met.
+valid_password = False
+
+if has_special and has_num and has_cap and has_low and len(password) >= 9:
+    valid_password = True
+    print("Password is valid!")
+else:
+    print("invalid password; include the missing criteria.")
 # 5. Add a condition to check that password length is greater than 9 digits. If 9 or less, it fails.
 
 # Hints/Suggestions:
