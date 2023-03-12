@@ -71,38 +71,38 @@
 
 # Find the solutions using this list
 
-birds = ["robin", "bluebird", "sparrow", "cardinal"]
+# birds = ["robin", "bluebird", "sparrow", "cardinal"]
 
 
 # 1. Save "bluebird" in a variable
 
 # WORK OUT YOUR SOLUTION HERE
-bluebird = birds[1]
+# bluebird = birds[1]
 
 # 2. Save "cardinal" in a variable
 
 # WORK OUT YOUR SOLUTION HERE
-cardinal = birds[-1]
+# cardinal = birds[-1]
 
 # 3. Insert "woodpecker" directly behind sparrow in the list
 
 # WORK OUT YOUR SOLUTION HERE
-birds.insert(2, 'woodpecker')
+# birds.insert(3, 'woodpecker')
 
 # 4. Reverse the birds list and print it out
 
 # WORK OUT YOUR SOLUTION HERE
-birds.reverse()
+# birds.reverse()
 
 # 5. Save the first two birds only into a new variable called two_birds
 
 # WORK OUT YOUR SOLUTION HERE
-two_birds = birds[0:2]
+# two_birds = birds[0:2]
 
 # 6. Print ["sparrow", "cardinal"] using negative indices
 
 # WORK OUT YOUR SOLUTION HERE
-print(birds[-5:-3])
+# print(birds[-5:-3])
 
 
 
@@ -119,12 +119,25 @@ print(birds[-5:-3])
 #    Note that it should not say item but the name of the fruit. So 'steak is not a fruit', 'apple is a fruit', etc. 
 
 # WORK OUT YOUR SOLUTION HERE
+# **********************
+items = ["steak", "apple", "bread", "butter", "pineapple"]
 
+for item in items:
+    if item != 'apple' and item != 'pineapple':
+        print(item + ' is not a fruit')
+    else:
+        print(item + ' is a fruit')
 
 # 2. Write a while loop starting with a counter = 1 that multiplies two to your counter, prints the counter, but breaks the loop after the counter reaches 1000. 
 
 # WORK OUT YOUR SOLUTION HERE
+# **********************
+counter = 1
 
+while counter < 1000:
+    counter *= 2
+    if counter < 1000:
+        print(counter)
 
 
 
